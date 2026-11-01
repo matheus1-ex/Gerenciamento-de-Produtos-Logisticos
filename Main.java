@@ -20,12 +20,23 @@ class Produto {
         return nome;
     }
     
+    //Get e Set de Preço
+    public void setPreco(double preco)
+    {
+        this.Preco = preco;
+    }
+    
+    public  double getPreco()
+    {
+        return Preco;
+    }
 }
 public class Main {
     public static void main(String[] args)
     {
         Produto p1 = new Produto("Tomate", 2.90, 3);
         p1.setNome("Pizza");
-        System.out.println(p1.getNome());
+        p1.setPreco(20.80);
+        System.out.println("Produto: " + p1.getNome() + "\n" + "preço: " + p1.getPreco());
     }
 }
